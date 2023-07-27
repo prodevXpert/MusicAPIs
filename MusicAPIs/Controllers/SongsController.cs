@@ -19,19 +19,19 @@ namespace MusicAPIs.Controllers
             return songs;
         }
         [HttpPost]
-        public void Post([FromBody]Song song)
+        public void Post([FromBody] Song song)
         {
             songs.Add(song);
         }
 
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]Song song)
+        public void Put(int id, [FromBody] Song song)
         {
             songs[id] = song;
         }
 
         [HttpDelete("{id}")]
-        
+
         public void Delete(int id)
         {
             songs.RemoveAt(id);
